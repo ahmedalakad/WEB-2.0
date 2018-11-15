@@ -17,7 +17,7 @@ app.post('/', async (req,res)=>{
     return res.send(return_info);
   }
 var result = await save_user_informaiton({"amount": amount, "email" : email});
-  res.send(result);
+res.send(result);
 });
 
 app.listen(3000,()=>{

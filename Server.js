@@ -16,8 +16,8 @@ app.post('/', async (req,res)=>{
     return_info.message = "The amount should be greater than 1";
     return res.send(return_info);
   }
-var result = await save_user_informaiton({"amount": amount, "email" : email});
-res.send(result);
+  var result = await save_user_informaiton({"amount": amount, "email" : email});
+  res.send(result);
 });
 
 app.listen(3000,()=>{

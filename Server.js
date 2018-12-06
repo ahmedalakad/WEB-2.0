@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const {save_user_informaiton} = require('./models/server_db');
+const {save_user_information} = require('./models/server_db');
 
 /* handling all the parsing */
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ app.post('/', async (req,res)=>{
     return_info.message = "The amount should be greater than 1";
     return res.send(return_info);
   }
-  var result = await save_user_informaiton({"amount": amount, "email" : email});
+  var result = await save_user_information({"amount": amount, "email" : email});
   res.send(result);
 });
 
